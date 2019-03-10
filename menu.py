@@ -33,6 +33,7 @@ def menu(con, header, options, width, screen_width, screen_height):
     libtcod.console_blit(window, 0, 0, width, height, 0, x, y, 1.0, 0.7)
     
     return window
+
     
 def inventory_menu(con, header, inventory, inventory_width, screen_width, screen_height):
     # show a menu with each item of the inventory as an option
@@ -55,3 +56,7 @@ def main_menu(con, background_image, screen_width, screen_height):
                              'By (Your name here)')
 
     menu(con, '', ['Play a new game', 'Continue last game', 'Quit'], 24, screen_width, screen_height)
+
+
+def message_box(con, header, width, screen_width, screen_height):
+    menu(con, header, [], width, screen_width, screen_height)
